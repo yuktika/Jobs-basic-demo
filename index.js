@@ -44,8 +44,8 @@ app.use((req, res, next) => {
 
 var configAuth = {
     googleAuth: {
-        clientID: '897835104905-04nuvhtb8vhqmlipm0r48neprov844sd.apps.googleusercontent.com',
-        clientSecret: 'kTndI4RvSeTSw63U-StxY5JN',
+        clientID: 'abcd',
+        clientSecret: 'kTndI',
         callbackURL: 'http://localhost:3000/auth/google/callback'
     },
 }
