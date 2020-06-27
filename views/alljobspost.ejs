@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Job Portal</title>
+</head>
+
+<body>
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="lgo">
+                <a class="navbar-brand" href="#">Job Portal</a>
+            </div>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mnu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Welcome to your dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Mission</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Vision</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Team</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Jobs For You</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Resume Writing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Recruiters Reach</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./signup">Signup</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+    <h3>All job posts are listed below </h3>
+
+
+    <div class="row">
+        <div class="container-fluid">
+            <div class="col-md-6" style="margin-top:5%">
+                <%for(var i =0 ; i < data.length ; i++){%>
+                <!-- <h3><%= data[i].jobtitle%> </h3>
+                            <h3><%= data[i].jobdescription%> </h3>
+                            <h3><%= data[i].companyname%> </h3>
+                            <h3><%= data[i].companylocation%> </h3> -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Job Title</th>
+                            <th scope="col">Job Description</th>
+                            <th scope="col">Company Name</th>
+                            <th scope="col">Company Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row"><%= data[i].jobtitle%> </td>
+                            <td><%= data[i].jobdescription%></td>
+                            <td><%= data[i].companyname%></td>
+                            <td><%= data[i].companylocation%> &nbsp; <a href="/new_details?jid=<%=data[i]._id %> " class="btn btn-primary">View Details</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <%}%>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

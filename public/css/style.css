@@ -1,0 +1,30 @@
+.lgo {
+    width: 50%;
+    float: right;
+}
+
+.mnu {
+    width: 50%;
+    float: left;
+}
+
+/* .emailinput{
+    width: 50%;
+}
+
+.passinput{
+    width: 50%;
+} */
+
+.lgimg {
+    width: 100%;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}

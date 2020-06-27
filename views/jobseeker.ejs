@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Job Portal</title>
+</head>
+
+<body>
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="lgo">
+                <a class="navbar-brand" href="#">Job Portal</a>
+            </div>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mnu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Your next job is just few steps away <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Mission</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Vision</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Team</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Jobs For You</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"> Resume Writing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Recruiters Reach</a>
+                    </div>
+                </li> -->
+                <div class="dropdown pmd-dropdown pmd-user-info ml-auto">
+                    <a href="javascript:void(0);" class="btn-user dropdown-toggle media align-items-center"
+                        data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
+                        <img class="mr-2" src="https://pro.propeller.in/assets/images/avatar-icon-40x40.png" width="40"
+                            height="40" alt="avatar">
+                        <div class="media-body">
+                            User
+                        </div>
+                        <!-- <i class="material-icons md-light ml-2 pmd-sm">more_vert</i> -->
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                        <a class="dropdown-item" href="javascript:void(0);"><%= name%></a>
+                        <a class="dropdown-item" href="javascript:void(0);"> <%= email%></a>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <img class="lgimg" src="img/login.png" alt="login">
+            <a href="/currentopening" class="btn btn-info" role="button">Current Opening</a>
+        </div>
+        <div class="col-md-6">
+            <form action="http://localhost:3000/jobdatas" method="POST" class="col-md-4">
+                <div class="form-group">
+                    <label> Name </label>
+                    <input name="name" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label> Job Title </label>
+                    <input name="jobtitle" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label> Company Location </label>
+                    <input name="companylocation" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Resume Uplaod</label>
+                    <input type="file" name="resume" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+                <br />
+                <div>
+                    <button type="submit" class="btn btn-primary">Save Details</button>
+                    <button class="btn btn-primary">Back </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
