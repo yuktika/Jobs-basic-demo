@@ -31,7 +31,7 @@ var formate = 'YYYY-MM-DD HH:mm:ss';
 
 app.use(express.json())
 app.use(session({
-    secret: "122334455qqaawwsseedftgyu667788990",
+    secret: " ",
     resave: false,
     saveUninitialized: true
 }))
